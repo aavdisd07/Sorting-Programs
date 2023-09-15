@@ -1,0 +1,101 @@
+
+
+#include <stdio.h>
+#include <string.h>
+
+struct studentdata
+{
+  // int marks[5];
+  char name[10];
+  int sub[5];
+
+} s[10];
+
+int main()
+{
+  int n, p;
+ // float O[n];
+  printf("enter how many students data you are inputing:");
+  scanf("%d", &n);
+  for (int i = 0; i < n; i++)
+  {
+    printf("\nEnter name of student:");
+    scanf("%s", s[i].name);
+    printf("Enter how many sub student have enrolled\n");
+    scanf("%d", &p);
+
+    int q, x = 0;
+    printf("\n1.Dm\n2.DS\n3.M3\n4.OOPS\n5.IC\n");
+    while (p != x)
+    {
+      if (1)
+      {
+        printf("\nChoose which subject\n");
+        scanf("%d", &q);
+        x++;
+        switch (q)
+        {
+        case 1:
+          printf("Enter marks in DM:");
+          scanf("%d", &s[i].sub[0]);
+
+          break;
+        case 2:
+          printf("Enter marks in DS:");
+          scanf("%d", &s[i].sub[1]);
+
+          break;
+        case 3:
+          printf("Enter marks in OOPS:");
+          scanf("%d", &s[i].sub[2]);
+
+          break;
+        case 4:
+          printf("Enter marks in M3:");
+          scanf("%d", &s[i].sub[3]);
+
+          break;
+        case 5:
+          printf("Enter marks in IC:");
+          scanf("%d", &s[i].sub[4]);
+
+          break;
+        default:
+
+          break;
+        }
+      }
+    }
+  }
+  int y, arr[n];
+ int perc[n],P;
+float O[n];
+  for (int i = 0; i < n; i++)
+  {
+    y = 0;
+   // P= 0;
+    for (int j = 0; j < p; j++)
+    {
+      {
+        y = y + (s[i].sub[j]);
+        //P=P+(y/(100*p))*100;
+      }
+    }
+
+    arr[i] = y;
+    O[i]=1;
+   // perc[i] =P;
+  }
+
+  for (int h = 0; h < n; h++)
+  {
+    printf("\n\t\t %s Total of %d Subjet is ->%d\n", s[h].name, p, arr[h]);
+     
+  }
+  for (int h = 0; h < n; h++)
+  {
+    printf("\n\t\t%s Total percentage is %d", s[h].name, O[h]);
+  }
+
+  return 0;
+}

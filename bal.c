@@ -1,0 +1,52 @@
+#include<stdio.h>
+int top=-1;
+#define size 10
+int stack[size];
+
+void push(char p)
+{
+    if(top==-1)
+    {
+      printf("Stack underflow\n");
+
+    }
+    else
+    {
+     stack[top+1]= p;
+      top=top+1;
+
+    }
+    
+}
+void pop()
+{
+   if(top==-1)
+   { printf("Stack underflow\n");
+   }
+   else
+   {
+       printf("%d ",stack[top]);
+       top=top-1;
+
+   }
+   
+}
+void balancing(char*x)
+{
+  if(x=='(')
+  {
+    push(());
+  }
+  else if(x==')')
+  {
+    pop();
+
+  }
+  else return;
+}
+int main()
+{
+    char expression={(a*b(r+g)/(a-f)(x))};
+    balancing(expression);
+
+}

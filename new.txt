@@ -1,0 +1,6 @@
+   Name            Address         Age          Blood type
+
+1) Avantika      Nanded            19            A+
+2) Arpita        Pune              20            B+
+3) Sushant       Mumbai            21            A+
+4) Teesha        Kolhapur          22            O+  Enter name 	

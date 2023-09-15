@@ -1,0 +1,39 @@
+
+//Program of marksheet of single student
+
+#include<stdio.h>
+#include<string.h>
+void result(int,int,int);
+void main()
+{
+   int p,c,m;
+   char name[20];
+
+   printf("Enter the name of student\n");
+   scanf("%s",name);
+   printf("Enter the physics ,chemistry and maths marks:");
+   scanf("%d%d%d",&p,&c,&m);
+ printf("\n#####################\n");
+   printf("Your name is:->\t");
+   printf("%s",name);
+   printf("\nYour result is:");
+
+ result(p,c,m);
+
+  printf("\n\t\t\tAll the best");
+
+}
+void result(int x,int y,int z){
+  int total=x+y+z;
+  float average=(total)/3;
+ // int totali=300;
+  float perc=(total*100)/300;
+
+  printf("\nTotal of 3 Subjet is ->%d\n",total);
+  printf("Average of 3 Subject is-> %0.2f\n",average);
+  printf("Your Percentage is ->%f\n",perc);
+}
+
+
+
+
